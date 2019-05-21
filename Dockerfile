@@ -13,12 +13,13 @@ ADD target/libs libs
 
 # In case of any other dependencies like .csv / .json / .xls
 # please ADD that as well
+
 # ADD suite files
 ADD book-flight-module.xml book-flight-module.xml
 ADD search-module.xml search-module.xml
 
 # Add healthcheck script
-ADD healthcheck.sh healthcheck.sh
+RUN wget https://s3.amazonaws.com/selenium-docker/healthcheck/healthcheck.sh
 
 # BROWSER
 # HUB_HOST
